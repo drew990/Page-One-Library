@@ -1,35 +1,32 @@
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page One</title>
+    <title>Page One Library - Home</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/public/css/login.css"/>
   </head>
   <body>
-    <div class="wrapper">
-      <header>
+      <nav>
         <h1>
-          <a href="/">Just Tech News</a>
+          <a href="/">Page One Library</a>
         </h1>
-        <nav>
-          {{#if loggedIn}}
-            <button id="logout" class="btn-no-style">logout</button>
-          {{else}}
-            <a href="/login">login</a>
-          {{/if}}
-        </nav>
-      </header>
+        {{#if loggedIn}}
+          <button id="logout" class="btn-no-style">logout</button>
+        {{else}}
+          <a href="/login">login</a>
+        {{/if}}
+      </nav>
       <main>
         {{{body}}}
       </main>
-      <footer>
-        Thanks for visiting!
-      </footer>
-    </div>
-
+  <footer>
+    <h3>
+      Copyright by Page One Library
+    </h3>
+  </footer>
+  </div>
     {{#if loggedIn}}
       <script src="/javascript/logout.js"></script>
     {{/if}}</body>
-
 </html>

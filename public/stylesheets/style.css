@@ -1,4 +1,4 @@
-* {
+/* * {
     box-sizing: border-box;
   }
   
@@ -175,4 +175,77 @@
     justify-content: center;
     padding: 1%;
     font-size: 110%;
-  }
+  } */
+
+/* Newer Code made by Andrew */
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+nav {
+  background-color: #393d3f;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 25px 15px;
+}
+nav h1 {
+  color: #fff;
+}
+
+h1 {
+  font-size: 38px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+h1 a {
+  text-decoration: none;
+  color: #fff;
+}
+
+h1 a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+button {
+  padding: 7px 12px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: -1px 5px 5px rgba(0, 0, 0, 0.25);
+  background-color: #fdfdff;
+  font-size: 14px;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5vh 2vw;
+}
