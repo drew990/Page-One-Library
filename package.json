@@ -16,7 +16,6 @@
   "description": "Book reporting app",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/drew990/Page-One-Library.git"
