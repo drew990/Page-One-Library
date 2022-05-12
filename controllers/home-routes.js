@@ -30,10 +30,13 @@ router.get("/", (req, res) => {
   })
     .then((dbReportData) => {
       const reports = dbReportData.map((report) => report.get({ plain: true }));
-      res.render("homepage", console.log("Look AT ME", reports), {
+      console.log(reports);
+
+      res.render("homepage", {
         // reports is the variable that I'll be grabbing
-        reports,
-        loggedIn: req.session.loggedIn,
+        title:"test"
+        , reports
+        //loggedIn: req.session.loggedIn,
       });
     })
     .catch((err) => {

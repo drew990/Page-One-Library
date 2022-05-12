@@ -1,3 +1,4 @@
-{{ #each reports as |report|}}
-    {{> bookreport}}
-{{/each}}
+<h3>{{title}}</h3>
+{{#reports}}
+{{this.title}}
+{{/reports}}
