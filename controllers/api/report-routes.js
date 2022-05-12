@@ -79,7 +79,7 @@ router.post('/', (req, res) => {
 });
 
 router.put('/', (req, res) => {
-    Post.update(
+    Report.update(
         {
             title:req.body.title
         },
@@ -89,12 +89,12 @@ router.put('/', (req, res) => {
           }
         }
       )
-        .then(dbPostData => {
-          if (!dbPostData) {
+        .then(dbReportData => {
+          if (!dbReportData) {
             res.status(404).json({ message: 'No post found with this id' });
             return;
           }
-          res.json(dbPostData);
+          res.json(dbReportData);
         })
         .catch(err => {
           console.log(err);
@@ -104,17 +104,17 @@ router.put('/', (req, res) => {
 })
 
 router.delete('/:id', (req, res) => {
-  Post.destroy({
+  Report.destroy({
     where: {
       id: req.params.id
     }
   })
-    .then(dbPostData => {
-      if (!dbPostData) {
+    .then(dbReportData => {
+      if (!dbReportData) {
         res.status(404).json({ message: 'No report found with this id' });
         return;
       }
-      res.json(dbPostData);
+      res.json(dbReportData);
     })
     .catch(err => {
       console.log(err);
