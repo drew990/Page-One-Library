@@ -81,7 +81,8 @@ router.post('/', (req, res) => {
 router.put('/', (req, res) => {
     Report.update(
         {
-            title:req.body.title
+            title:req.body.title,
+            report_score: req.body.score
         },
         {
           where: {
