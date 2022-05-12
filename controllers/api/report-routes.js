@@ -7,7 +7,6 @@ router.get('/', (req, res) => {
         order: [['created_at', 'DESC']],
         attributes: [
             'id',
-            'report_url',
             'title',
             'created_at',
             'report_author',
@@ -34,7 +33,6 @@ router.get('/:id', ( req, res) => {
          },
          attributes: [
             'id',
-            'report_url',
             'title',
             'created_at',
             'report_author',
@@ -65,10 +63,10 @@ router.get('/:id', ( req, res) => {
 router.post('/', (req, res) => {
      Report.create({
          title: req.body.title,
-         report_url: req.body.report_url,
          user_id: req.body.user_id,
          report_author: req.body.author,
          report_score: req.body.score,
+         report_url: req.body.url,
          report_content: req.body.content
      })
      .then(dbReportData => res.json(dbReportData))

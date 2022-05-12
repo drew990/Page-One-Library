@@ -18,13 +18,6 @@ Report.init (
             type: DataTypes.STRING,
             allowNull: false
         },
-        report_url: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-              isURL: true
-            }
-        },
         report_author: {
             type: DataTypes.STRING,
             allowNull: true
@@ -36,6 +29,10 @@ Report.init (
         report_score: {
             type: DataTypes.INTEGER,
             allowNull: false
+        },
+        report_url: {
+            type: DataTypes.STRING,
+            allowNull:true
         },
         user_id: {
             type: DataTypes.INTEGER,
