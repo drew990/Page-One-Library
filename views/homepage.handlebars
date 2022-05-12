@@ -1,4 +1,10 @@
-<h3>{{title}}</h3>
-{{#reports}}
-{{this.title}}
-{{/reports}}
+
+<ul class="post-list">
+  {{#each reports as |report|}}
+  <li>
+    {{> bookreport }}
+  </li>
+  {{/each}}
+</ul>
+
+
