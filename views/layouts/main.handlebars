@@ -14,8 +14,14 @@
         {{#if loggedIn}}
           <button id="logout" class="btn-no-style">logout</button>
         {{else}}
+<<<<<<< HEAD
           <a href="/login"><button>login</button></a>
+=======
+          <a href="/login"><button>Log In</button></a>
+>>>>>>> feature/newpost
         {{/if}}
+          <a href="/new"><button>Create a New Report</button></a>
+
       </nav>
       <main>
         {{{body}}}
@@ -27,6 +33,8 @@
   </footer>
   </div>
     {{#if loggedIn}}
-      <script src="/javascript/logout.js"></script>
-    {{/if}}</body>
+      <script src="../../js/login.js"></script>
+      <script src="../../js/logout.js"></script>
+    {{/if}}
+    </body>
 </html>

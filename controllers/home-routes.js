@@ -113,3 +113,17 @@ router.get("/report/:id", (req, res) => {
 });
 
 module.exports = router;
+
+
+
+router.get("/new", (req, res) => {
+  if (!req.session.loggedIn) {
+    res.redirect("/login");
+    return;
+  } else {
+    res.render("create-report", {
+      loggedIn: req.session.loggedIn,
+    })
+  }
+});
+
