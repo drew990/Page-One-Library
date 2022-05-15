@@ -34,9 +34,9 @@ router.get("/", (req, res) => {
 
       res.render("homepage", {
         // reports is the variable that I'll be grabbing
-        title:"test"
-        , reports
-        //loggedIn: req.session.loggedIn,
+        title:"test",
+        reports,
+        loggedIn: req.session.loggedIn,
       });
     })
     .catch((err) => {
