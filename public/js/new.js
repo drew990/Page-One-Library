@@ -9,6 +9,7 @@ async function newReporthandler(e) {
     const author = document.querySelector("#author-login").value.trim();
     const score = document.querySelector("#score").value;
     const content = document.querySelector("#report-content").value.trim();
+    const url = "fake.com"
   
     // Checks if title and author are filled
     if (title && author) {
@@ -24,24 +25,13 @@ async function newReporthandler(e) {
         document.location.replace("/");
       } else {
         // Let user know they failed to log in
-        alert("Failed to log in.");
+        alert("failed to make a new report");
       }
     }
-  }
+}
 
 
-  router.post('/', (req, res) => {
-    Report.create({
-        title: req.body.title,
-        user_id: req.body.user_id,
-        report_author: req.body.author,
-        report_score: req.body.score,
-        report_url: req.body.url,
-        report_content: req.body.content
-    })
-    .then(dbReportData => res.json(dbReportData))
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
+document
+  .getElementById("submit-report-btn")
+  .addEventListener("submit", newReporthandler);
+

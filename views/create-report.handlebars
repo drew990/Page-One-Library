@@ -10,17 +10,22 @@
         <input type="text" id="author" />
       </div>
       <div>
-            <p>What would you rate the book out of 5?</p>  
+            <label for="score">What would you rate the book out of 5?</label for="score">  
             <input type="radio" name="score" value= 1 >1<br>  
             <input type="radio" name="score" value= 2 >2<br>  
             <input type="radio" name="score" value= 3 >3<br>  
             <input type="radio" name="score" value= 4 >4<br>  
             <input type="radio" name="score" value= 5 >5<br>  
+      </div>
+      <div>
+          <label for="report-content">What are your thoughts on this book?</label>
+          <br>
+          <textarea name="report-content-area" id="report-content" cols="30" rows="6">Type your thoughts here</textarea>
       </div>  
       <div>
-        <button type="submit" id="login-btn">Login</button>
+        <button type="submit" id="submit-report-btn">Submit a New Report!</button>
       </div>
     </form>
   </div>
-<script src="../public/js/new.js"></script>
+<script src="../js/new.js"></script>
 
