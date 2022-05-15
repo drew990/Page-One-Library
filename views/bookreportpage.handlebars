@@ -1,0 +1,18 @@
+<div class="container">
+  <section>
+    <div class="card-content">
+      <h1>{{Title}}</h1>
+      <h2>By: {{Author}} </h2>
+      <p>Book Score: {{score}} </p>
+      <div class="divider"> </div>
+      <p>{{Content}}</p>
+    </div>
+  </section>
+
+    {{#each comments as |comment|}}
+      <li>
+        {{> comment-details }}
+      </li>
+      {{/each}}
+
+</div>
