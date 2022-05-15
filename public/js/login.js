@@ -31,6 +31,7 @@ async function signupFormHandler(e) {
   // Prevent default action from happening
   // Note: Prevents redirect until sign up is confirm
   e.preventDefault();
+  console.log("submitted")
 
   // Get Sign up info
   const username = document.querySelector("#username-signup").value.trim();
@@ -47,6 +48,7 @@ async function signupFormHandler(e) {
     });
 
     if (response.ok) {
+      console.log("fetch sent sent")
       document.location.replace("/");
     } else {
       alert("Failed to sign up.");
