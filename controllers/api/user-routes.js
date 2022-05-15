@@ -95,8 +95,14 @@ router.post('/login', (req, res) => {
             res.status(400).json({ message: 'Incorrect Password!'});
             return;
         }
-        res.json({ user: dbUserData, message: 'You are now logged in!'})
-
+        // this creates a new session for "loggedin"
+        req.session.save(() => {
+          req.session.user_id = dbUserData.id;
+          req.session.username = dbUserData.username;
+          req.session.loggedIn = true;
+    
+          res.json({ user: dbUserData, message: 'You are now logged in!' });
+        });
     })
 })
 
@@ -140,6 +146,16 @@ router.delete('/:id', (req, res) => {
         console.log(err);
         res.status(500).json(err);
       });
+});
+
+router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
 });
 
 module.exports = router;
