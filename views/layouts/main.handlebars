@@ -11,6 +11,7 @@
         <h1>
           <a href="/">Page One Library</a>
         </h1>
+            <div class="flex-btn">
         {{#if loggedIn}}
           <button id="logout" class="btn-no-style">Log Out</button>
         {{else}}
@@ -21,7 +22,7 @@
           </a>
         {{/if}}
           <a href="/new"><button>Create a New Report</button></a>
-
+</div>
       </nav>
       <main>
         {{{body}}}

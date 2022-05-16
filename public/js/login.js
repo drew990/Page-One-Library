@@ -31,23 +31,27 @@ async function signupFormHandler(e) {
   // Prevent default action from happening
   // Note: Prevents redirect until sign up is confirm
   e.preventDefault();
-  console.log("submitted");
 
   // Get Sign up info
   const username = document.querySelector("#username-signup").value.trim();
   const email = document.querySelector("#email-signup").value.trim();
   const password = document.querySelector("#password-signup").value.trim();
 
+  console.log("USERNAME: ", username, "EMAIL: ", email, "Password: ", password);
+
   // Checks if info is filled
   if (username && email && password) {
     // Get response from login info
-    const response = await fetch("/api/users/login", {
+    const response = await fetch("/api/users", {
       method: "POST",
       body: JSON.stringify({ username, email, password }),
       headers: { "Content-Type": "application/json" },
     });
 
+    console.log("RESPONSE: ", response);
+
     if (response.ok) {
+      console.log("submitted");
       console.log("fetch sent sent");
       document.location.replace("/");
     } else {
@@ -59,10 +63,10 @@ async function signupFormHandler(e) {
 
 // Listens for the login click
 document
-  .querySelector(".login-form")
+  .getElementById("login-btn")
   .addEventListener("click", loginFormHandler);
 
 // listens for sign up click
 document
-  .querySelector(".signup-form")
+  .getElementById("signup-btn")
   .addEventListener("click", signupFormHandler);
