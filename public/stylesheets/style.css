@@ -264,6 +264,15 @@ main {
   background-position: center;
 }
 
+.report-background {
+  background-image: url("https://images.pexels.com/photos/2041540/pexels-photo-2041540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  height: 85vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
 .login-container {
   display: flex;
   align-items: center;
