@@ -181,39 +181,44 @@ main {
   width: 100%;
 }
 
-.score {
+.star-rating {
   display: flex;
+  align-items: center;
+  width: 160px;
   flex-direction: row-reverse;
-  justify-content: center;
+  justify-content: space-between;
+  margin: 40px auto;
+  position: relative;
 }
 
-.score > input {
+.star-rating input {
   display: none;
 }
 
-.score > label {
-  position: relative;
-  width: 1.1em;
-  font-size: 15vw;
-  color: #ffd700;
-  cursor: pointer;
+.star-rating > label {
+  width: 30px;
+  height: 30px;
+  font-family: Arial;
+  font-size: 30px;
+  transition: 0.2s ease;
+  color: orange;
 }
 
-.score > label::before {
-  content: "\2605";
+.star-rating label:hover {
+  color: rgba(48, 76, 137, 0.8);
+  transition: 0.2s ease;
+}
+.star-rating label:active::before {
+  transform:scale(1.1);
+}
+
+.star-rating label::before {
+  content: '\2606';
   position: absolute;
-  opacity: 0;
+  top: 0px;
+  line-height: 26px;
 }
 
-.score > label:hover:before,
-.score > label:hover ~ label:before {
-  opacity: 1 !important;
-}
-
-.score > input:checked ~ label:before {
-  opacity: 1;
-}
-
-.score:hover > input:checked ~ label:before {
-  opacity: 0.4;
+.star-rating input:checked ~ label:before {
+  content:'\2605';
 }

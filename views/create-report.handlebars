@@ -1,6 +1,8 @@
-  <div class="report-container">
-    
-    <div class="login-form">
+
+<div class="report-background">
+    <div class="login-container">
+     <div class = "login-form-style">
+    <form class="login-form">
       <h2>Create a New Book Report</h2>
        <div class="organize">
         <div>
@@ -14,15 +16,24 @@
         </div>
         <input type="text" id="author" placeholder="Author"/>
       </div>
-      <div>
-            <label for="score">What would you rate the book out of 5?</label for="score"> 
-            <br> 
-            <input type="radio" class="radiobtn" name="score" value="5" id="5"><label for="5">☆</label>
-            <input type="radio" class="radiobtn" name="score" value="4" id="4"><label for="4">☆</label>
-            <input type="radio" class="radiobtn" name="score" value="3" id="3"><label for="3">☆</label>
-            <input type="radio" class="radiobtn" name="score" value="2" id="2"><label for="2">☆</label>
-            <input type="radio" class="radiobtn" name="score" value="1" id="1"><label for="1">☆</label>  
+
+      <div class="star-rating">
+            <input type="radio" name="stars" id="star-a" value="5"/>
+            <label for="star-a"></label>
+
+            <input type="radio" name="stars" id="star-b" value="4"/>
+            <label for="star-b"></label>
+        
+            <input type="radio" name="stars" id="star-c" value="3"/>
+            <label for="star-c"></label>
+        
+            <input type="radio" name="stars" id="star-d" value="2"/>
+            <label for="star-d"></label>
+        
+            <input type="radio" name="stars" id="star-e" value="1"/>
+            <label for="star-e"></label>
       </div>
+     
       <div>
           <label for="report-content">What are your thoughts on this book?</label>
           <br>
