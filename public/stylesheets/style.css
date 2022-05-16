@@ -213,18 +213,72 @@ main {
   transition: 0.2s ease;
 }
 .star-rating label:active::before {
-  transform:scale(1.1);
+  transform: scale(1.1);
 }
 
 .star-rating label::before {
-  content: '\2606';
+  content: "\2606";
   position: absolute;
   top: 0px;
   line-height: 26px;
 }
 
 .star-rating input:checked ~ label:before {
-  content:'\2605';
+  content: "\2605";
+}
+
+/* Book Report Page */
+.container {
+  padding: 25px 0;
+  width: 50%;
+  margin: 50px auto;
+}
+
+.container h1 {
+  margin-bottom: 15px;
+}
+
+.container h2 {
+  margin-bottom: 15px;
+}
+
+.card-content {
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: -1px 5px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 25px;
+}
+
+.divider {
+  border: 1px solid rgba(0, 0, 0, 1);
+  width: 100%;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment h4 {
+  margin-bottom: 10px;
+}
+
+.add-comment {
+  margin: 25px 0;
+  text-align: center;
+}
+
+.add-comment input {
+  width: 100%;
+  padding: 15px;
+  border: none;
+}
+
+.add-comment div {
+  padding: 25px;
 }
 
 
