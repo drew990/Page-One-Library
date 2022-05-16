@@ -63,7 +63,6 @@ router.get("/report/:id", (req, res) => {
       "id",
       "report_url",
       "title",
-      "created_at",
       "report_author",
       "report_score",
       "user_id",
@@ -71,13 +70,7 @@ router.get("/report/:id", (req, res) => {
     include: [
       {
         model: Comment,
-        attributes: [
-          "id",
-          "comment_text",
-          "report_id",
-          "user_id",
-          "created_at",
-        ],
+        attributes: ["id", "comment_text", "report_id", "user_id"],
         include: {
           model: User,
           attributes: ["username"],
