@@ -31,7 +31,7 @@ async function signupFormHandler(e) {
   // Prevent default action from happening
   // Note: Prevents redirect until sign up is confirm
   e.preventDefault();
-  console.log("submitted")
+  console.log("submitted");
 
   // Get Sign up info
   const username = document.querySelector("#username-signup").value.trim();
@@ -48,7 +48,7 @@ async function signupFormHandler(e) {
     });
 
     if (response.ok) {
-      console.log("fetch sent sent")
+      console.log("fetch sent sent");
       document.location.replace("/");
     } else {
       alert("Failed to sign up.");
@@ -59,10 +59,10 @@ async function signupFormHandler(e) {
 
 // Listens for the login click
 document
-  .getElementById("login-btn")
+  .querySelector(".login-form")
   .addEventListener("click", loginFormHandler);
 
 // listens for sign up click
 document
-  .getElementById("signup-btn")
+  .querySelector(".signup-form")
   .addEventListener("click", signupFormHandler);
