@@ -14,60 +14,6 @@ router.get("/", (req, res) => {
     });
 });
 
-<<<<<<< HEAD
-router.post('/', (req, res) => {
-    User.create({
-        username: req.body.username,
-        email: req.body.email,
-        password: req.body.password
-    })
-    .then(dbUserData => {
-      req.session.save(() => {
-        req.session.user_id = dbUserData.id;
-        req.session.username = dbUserData.username;
-        req.session.loggedIn = true;
-
-        res.json(dbUserData)
-      })
-    })
-});
-
-router.post('/login', (req, res) => {
-    // query operation
-    User.findOne({
-        where: {
-            email: req.body.email
-        }
-    }).then(dbUserData => {
-        if (!dbUserData) {
-            res.status(400).json({ message: 'No user with that email address'});
-            return;
-        }
-        const validPassword = dbUserData.checkPassword(req.body.password);
-        if (!validPassword) {
-            res.status(400).json({ message: 'Incorrect Password!'});
-            return;
-        }
-        // this creates a new session for "loggedin"
-        req.session.save(() => {
-          req.session.user_id = dbUserData.id;
-          req.session.username = dbUserData.username;
-          req.session.loggedIn = true;
-    
-          res.json({ user: dbUserData, message: 'You are now logged in!' });
-        });
-    })
-})
-
-router.put('/:id', (req, res) => {
-    // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
-  
-    // if req.body has exact key/value pairs to match the model, you can just use `req.body` instead
-    User.update(req.body, {
-      individualHooks: true, 
-      where: {
-        id: req.params.id
-=======
 router.get("/:id", (req, res) => {
   User.findOne({
     attributes: { exclude: ["password"] },
@@ -102,7 +48,6 @@ router.get("/:id", (req, res) => {
       if (!dbUserData) {
         res.status(404).json({ message: "No user with this ID was found" });
         return;
->>>>>>> a51178b426ded86a4822aa8a40a0de04b7203320
       }
       res.json(dbUserData);
     })
