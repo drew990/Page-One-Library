@@ -19,7 +19,11 @@
           </div>
           <input type="password" id="password-login" placeholder="password" />
         </div>
-        <button type="submit" id="login-btn">Login</button>
+        <button
+          type="submit"
+          id="login-btn"
+          onclick="loginFormHandler()"
+        >Login</button>
       </form>
       <form class="signup-form">
         <h2>Sign Up</h2>
@@ -41,7 +45,8 @@
           </div>
           <input type="password" id="password-signup" placeholder="Password" />
         </div>
-        <button type="submit" id="signup-btn">Sign Up</button>
+        <button type="submit" id="signup-btn" onclick="signupFormHandler()">Sign
+          Up</button>
       </form>
     </div>
   </div>
