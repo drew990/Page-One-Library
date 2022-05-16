@@ -1,13 +1,17 @@
-<article class="report">
-  <div class="title">
-    <h4>{{title}}</h4>
-  </div>
-  <div class="score">
-    Score = {{report_score}}/5
-  </div>
-  <div class="meta">
-  Created by {{user.username}} on {{ createdAt}}
-    |
-    <a href="/report/{{id}}">{{comments.length}} comments</a>
-  </div>
+<article class="card">
+  <a href="/report/{{id}}">
+    <h3>{{title}}</h3>
+    <h4>
+      Created by
+      {{user.username}}
+      on
+      {{createdAt}}</h4>
+    <p>
+      Score =
+      {{report_score}}/5
+    </p>
+
+    {{comments.length}}
+    comments</a>
+
 </article>

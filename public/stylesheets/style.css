@@ -256,6 +256,14 @@ main {
   min-height: 80vh;
 }
 
+.login-background {
+  background-image: url("https://images.pexels.com/photos/159514/yale-university-landscape-universities-schools-159514.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  height: 85vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .login-container {
   display: flex;
   align-items: center;
@@ -263,7 +271,8 @@ main {
   flex-direction: column;
   flex-wrap: wrap;
   width: 400px;
-  margin: 50px auto;
+  padding: 50px 0;
+  margin: 0 auto;
 }
 
 .login-form {
@@ -271,15 +280,36 @@ main {
   padding: 15px;
   border-radius: 5px;
   margin: 10px 0;
+<<<<<<< HEAD
   background-color: #304C89;
+=======
+  background-color: rgba(48, 76, 137, 0.8);
+>>>>>>> ae6fa2e (Updated login and added small little details to other handlebars;)
   box-shadow: -1px 5px 5px rgba(0, 0, 0, 0.25);
   width: 90%;
   color: #fff;
+  text-align: center;
 }
 
-.login-form div {
-  margin: 10px 0;
-  text-align: center;
+.login-form h2 {
+  padding: 20px 0 0px 0;
+}
+
+.login-form input {
+  width: 60%;
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: -1px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.organize {
+  margin: 15px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .display-cards {
@@ -301,7 +331,7 @@ main {
   overflow-wrap: break-word;
 }
 
-.card h3 {
+.card h4 {
   padding: 10px 0px;
 }
 
