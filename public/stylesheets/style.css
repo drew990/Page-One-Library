@@ -280,11 +280,7 @@ main {
   padding: 15px;
   border-radius: 5px;
   margin: 10px 0;
-<<<<<<< HEAD
-  background-color: #304C89;
-=======
   background-color: rgba(48, 76, 137, 0.8);
->>>>>>> ae6fa2e (Updated login and added small little details to other handlebars;)
   box-shadow: -1px 5px 5px rgba(0, 0, 0, 0.25);
   width: 90%;
   color: #fff;
@@ -354,35 +350,35 @@ main {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
-  }
-  
-  .score > input{
-   display:none;
-  }
-  
-  .score > label {
+}
+
+.score > input {
+  display: none;
+}
+
+.score > label {
   position: relative;
   width: 1.1em;
   font-size: 15vw;
-  color: #FFD700;
+  color: #ffd700;
   cursor: pointer;
-  }
-  
-  .score > label::before{
+}
+
+.score > label::before {
   content: "\2605";
   position: absolute;
   opacity: 0;
-  }
-  
-  .score > label:hover:before,
-  .score > label:hover ~ label:before {
+}
+
+.score > label:hover:before,
+.score > label:hover ~ label:before {
   opacity: 1 !important;
-  }
-  
-  .score > input:checked ~ label:before{
-  opacity:1;
-  }
-  
-  .score:hover > input:checked ~ label:before{ 
+}
+
+.score > input:checked ~ label:before {
+  opacity: 1;
+}
+
+.score:hover > input:checked ~ label:before {
   opacity: 0.4;
-   }
+}
