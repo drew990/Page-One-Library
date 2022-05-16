@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page One Library - Home</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
-    <link rel="stylesheet" type="text/css" href="/Project-2/public/css/login.css"/>
+    <link rel="stylesheet"  href="/Project-2/public/css/login.css"/>
   </head>
   <body>
       <nav>
@@ -32,9 +32,10 @@
     </h3>
   </footer>
   </div>
-        <script src="../../js/login.js"></script>
     {{#if loggedIn}}
       <script src="../../js/logout.js"></script>
+    {{else}}
+        <script src="../../js/login.js"></script>
     {{/if}}
     </body>
 </html>
