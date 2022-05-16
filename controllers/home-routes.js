@@ -34,11 +34,7 @@ router.get("/", (req, res) => {
 
       res.render("homepage", {
         // reports is the variable that I'll be grabbing
-<<<<<<< HEAD
-        title:"test",
-=======
         title: "test",
->>>>>>> b8cd4c3 (Updated Handlebars)
         reports,
         //loggedIn: req.session.loggedIn,
       });
