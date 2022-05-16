@@ -16,7 +16,6 @@ const applauseSound = new Howl({
 
 // new report handle
 async function newReporthandler(event) {
-    console.log("you tried to submit a new report!")
     // Prevent default action from happening
     // Note: Prevents redirect until login is replace
     event.preventDefault();
