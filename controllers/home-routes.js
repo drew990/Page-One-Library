@@ -3,7 +3,6 @@ const sequelize = require("../config/connection");
 const { Report, User, Comment } = require("../models");
 
 router.get("/", (req, res) => {
-  console.log(req.session);
   Report.findAll({
     // Attribution not needed and can just include model
 
@@ -34,7 +33,6 @@ router.get("/", (req, res) => {
 
       res.render("homepage", {
         // reports is the variable that I'll be grabbing
-        title: "test",
         reports,
         loggedIn: req.session.loggedIn,
       });
