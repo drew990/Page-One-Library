@@ -9,15 +9,17 @@ const getScore = () => {
 }
 console.log("this is a test to see if js is connected!")
 
+const applauseSound = new Howl({
+    src: "../sfx/applause.wav"
+})
 
 
 // new report handle
 async function newReporthandler(event) {
-    console.log("you tried to submit a new report!")
     // Prevent default action from happening
     // Note: Prevents redirect until login is replace
     event.preventDefault();
-    
+    applauseSound.play();
     // Get Login information
     const title = document.querySelector("#book-title").value.trim();
     const author = document.querySelector("#author").value.trim();
