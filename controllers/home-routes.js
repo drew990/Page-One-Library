@@ -99,7 +99,7 @@ router.get("/report/:id", (req, res) => {
       const report = dbReportData.get({ plain: true });
 
       // pass data to template
-      res.render("single-report", {
+      res.render("single-post", {
         report,
         loggedIn: req.session.loggedIn,
       });
