@@ -46,7 +46,7 @@ Report.belongsTo(User, {
   });
   
   Comment.belongsTo(Report, {
-    foreignKey: 'id'
+    foreignKey: 'post_id'
   });
   
   User.hasMany(Comment, {
@@ -54,7 +54,7 @@ Report.belongsTo(User, {
   });
   
   Report.hasMany(Comment, {
-    foreignKey: 'id'
+    foreignKey: 'post_id'
   });
 
 
