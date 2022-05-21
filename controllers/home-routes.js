@@ -110,7 +110,6 @@ router.get("/report/:id", (req, res) => {
     });
 });
 
-module.exports = router;
 
 router.get("/new", (req, res) => {
   if (!req.session.loggedIn) {
@@ -122,3 +121,5 @@ router.get("/new", (req, res) => {
     });
   }
 });
+
+module.exports = router;
