@@ -4,7 +4,7 @@
   <!--       {{! Login Form }} -->
   <div class="login-container">
     <div class="login-form-style">
-      <form class="login-form">
+      <div class="login-form">
         <h2>Login</h2>
         <p> Login here with your email and password </p>
         <div class="organize">
@@ -20,12 +20,11 @@
           <input type="password" id="password-login" placeholder="password" />
         </div>
         <button
-          type="submit"
           id="login-btn"
           onclick="loginFormHandler()"
         >Login</button>
-      </form>
-      <form class="signup-form">
+      </div>
+      <div class="signup-form">
         <h2>Sign Up</h2>
         <div class="organize">
           <div>
@@ -45,9 +44,9 @@
           </div>
           <input type="password" id="password-signup" placeholder="Password" />
         </div>
-        <button type="submit" id="signup-btn" onclick="signupFormHandler()">Sign
+        <button id="signup-btn" >Sign
           Up</button>
-      </form>
+      </div>
     </div>
   </div>
 </div>

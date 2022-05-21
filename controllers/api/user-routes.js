@@ -58,10 +58,12 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
+  console.log("you attempted to create a new user")
   User.create({
     username: req.body.username,
     email: req.body.email,
     password: req.body.password,
+    
   }).then((dbUserData) => {
     req.session.save(() => {
       req.session.user_id = dbUserData.id;
@@ -70,7 +72,9 @@ router.post("/", (req, res) => {
 
       res.json(dbUserData);
     });
-  });
+  }).catch((err) => {
+    console.log(err)
+  })
 });
 
 router.post("/login", (req, res) => {

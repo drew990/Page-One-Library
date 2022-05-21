@@ -53,4 +53,4 @@ const reportdata = [
 
 const seedReports = () => Post.bulkCreate(reportdata);
 
-module.exports = seedReports;
+//module.exports = seedReports;

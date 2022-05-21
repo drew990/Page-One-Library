@@ -27,17 +27,15 @@ async function loginFormHandler(e) {
   }
 }
 
-async function signupFormHandler(e) {
+async function signupFormHandler(event) {
   // Prevent default action from happening
   // Note: Prevents redirect until sign up is confirm
-  e.preventDefault();
+  event.preventDefault();
 
   // Get Sign up info
   const username = document.querySelector("#username-signup").value.trim();
   const email = document.querySelector("#email-signup").value.trim();
   const password = document.querySelector("#password-signup").value.trim();
-
-  console.log("USERNAME: ", username, "EMAIL: ", email, "Password: ", password);
 
   // Checks if info is filled
   if (username && email && password) {
@@ -52,9 +50,10 @@ async function signupFormHandler(e) {
 
     if (response.ok) {
       console.log("submitted");
-      console.log("fetch sent sent");
+      console.log("fetch sent");
       document.location.replace("/");
     } else {
+      console.log(response)
       alert("Failed to sign up.");
       alert(response.statusText);
     }
