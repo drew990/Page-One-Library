@@ -41,7 +41,7 @@ async function newReporthandler(event) {
   
       // If response is valid, it'll load the home screen
       if (response.ok) {
-        document.location.replace("/");
+        openModal()
       } else {
         // Let user know they failed to log in
         alert("failed to make a new report");
@@ -49,10 +49,23 @@ async function newReporthandler(event) {
     }
 }
 
+let modal = document.querySelector(".modal")
+function openModal(){
+  modal.style.display = 'block'
+}
+
+function closeModal(event){
+  event.preventDefault();
+  document.location.replace("/")
+}
 
 document
   .getElementById("submit-report-btn")
   .addEventListener("click", newReporthandler);
+
+
+document.getElementById("exit-modal").addEventListener("click", closeModal)
+
 
 //   const oneStar = getElementByid("1")
 //   const twoStar = getElementByid("2")
