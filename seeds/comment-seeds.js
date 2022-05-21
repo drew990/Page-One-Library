@@ -266,4 +266,4 @@
 
 // const seedComments = () => Comment.bulkCreate(commentdata);
 
-module.exports = seedComments;
+//module.exports = seedComments;

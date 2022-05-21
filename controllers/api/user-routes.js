@@ -60,7 +60,6 @@ router.get("/:id", (req, res) => {
 router.post("/", (req, res) => {
   console.log("you attempted to create a new user")
   User.create({
-    id: null,
     username: req.body.username,
     email: req.body.email,
     password: req.body.password,
@@ -73,7 +72,9 @@ router.post("/", (req, res) => {
 
       res.json(dbUserData);
     });
-  });
+  }).catch((err) => {
+    console.log(err)
+  })
 });
 
 router.post("/login", (req, res) => {
