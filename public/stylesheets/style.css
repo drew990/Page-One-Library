@@ -232,14 +232,16 @@ main {
   top: 0%;
   height: 100%;
   width: 100%;
-  background-color: rgba(48, 76, 137, 0.8);
+  background-color: rgba(126, 127, 128, 0.8);
 }
 
-.modal-content {
+.modalcontent {
+  color: rgb(100, 100, 100);
   background-color: rgb(255, 255, 255);
   margin: 30% auto;
   padding: 10px;
-  width: 70%;box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.25);
+  width: 50%;box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
 }
  
 #exit-modal:hover  {
