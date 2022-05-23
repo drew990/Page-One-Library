@@ -277,7 +277,8 @@ main {
 }
 
 .comment h4 {
-  margin-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 5px;
 }
 
 .add-comment {

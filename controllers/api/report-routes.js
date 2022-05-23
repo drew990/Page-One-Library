@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { Report, User, Comment } = require("../../models");
 const sequelize = require("../../config/connection");
+const res = require("express/lib/response");
 
 router.get("/", (req, res) => {
   Report.findAll({
@@ -29,11 +30,14 @@ router.get("/", (req, res) => {
 
 router.get("/:id", (req, res) => {
   Report.findOne({
+    where: {
+      id: req.params.id,
+    },
     include: [
       { model: User, attributes: ["username"] },
       {
         model: Comment,
-        attributes: ["id", "comment_text", "post_id", "user_id"],
+        attributes: ["id", "comment_text", "report_id", "user_id"],
         include: {
           model: User,
           attributes: ["username"],
@@ -52,6 +56,10 @@ router.get("/:id", (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
+});
+
+router.put("/:id", (req, res) => {
+  Report.update({});
 });
 
 router.post("/", (req, res) => {
