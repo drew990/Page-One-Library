@@ -84,11 +84,7 @@ router.get("/reports/:id", (req, res) => {
       const report = dbReportData.get({ plain: true });
 
       // pass data to template
-<<<<<<< HEAD
-      res.render("single-post", {
-=======
       res.render("bookreportpage", {
->>>>>>> 0b3f935 (Updated Handlebars and API)
         report,
         loggedIn: req.session.loggedIn,
       });
@@ -98,7 +94,6 @@ router.get("/reports/:id", (req, res) => {
       res.status(500).json(err);
     });
 });
-
 
 router.get("/new", (req, res) => {
   if (!req.session.loggedIn) {
