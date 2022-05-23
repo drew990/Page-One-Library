@@ -35,5 +35,9 @@ To run the application locally, install:
 - Node.js
 Then clone the repository, run "npm install", log into MySQL with your username and password, and run "npm start". The application will be on port 3001.
 
+## Links
+Link to repository: https://github.com/drew990/Page-One-Library
+Link to deployed Heroku application: https://fathomless-shelf-93738.herokuapp.com/
+
 ## Created by
 Sam Levin, Nitish Doss, and Andrew Banagas
