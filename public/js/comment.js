@@ -1,14 +1,20 @@
 // Comment JS handler
+
+console.log("Comment JS is being read!");
+
 async function commentFormHandler(e) {
   // Prevent default action from happening
   // Note: Prevents redirect until login is replace
   e.preventDefault();
+  console.log("COMMENT HAS BTN HAS BEEN CLICKED");
 
   // Get Login information
   const comment = document.querySelector("#book-comment").value.trim();
 
   // Checks if comment is filled
   if (comment) {
+    console.log("Comment", comment);
+
     // Get response from comment info
     const response = await fetch("/api/comments", {
       method: "POST",

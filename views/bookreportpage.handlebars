@@ -1,15 +1,14 @@
 <div class="container">
       <section>
         <div class="card-content">
-          <h1>{{Title}}</h1>
-          <h2>By: {{Author}} </h2>
-          <p>Book Score: {{score}} </p>
+          <h1>{{report.title}}</h1>
+          <h2>By: {{report.report_author}} </h2>
+          <p>Book Score: {{report.report_score}} </p>
           <div class="divider"> </div>
-          <p>{{Content}}</p>
+          <p>{{report.report_content}}</p>
         </div>
       </section>
-
-    {{#each comments as |comment|}}
+    {{#each report.comments as |comment|}}
       <li>
         {{> comment-details }}
       </li>
@@ -17,10 +16,10 @@
      <div class="add-comment">
         <form>
           <input type="text" id="book-comment" placeholder="Whats on your mind?" />
-
         </form>
         <div>
-          <button type="submit" id="comment-btn">Submit </button>
+          <button type="submit" id="comment-btn">Submit</button>
         </div>
       </div>
+      <script src="../public/js/comment.js"></script>
 </div>

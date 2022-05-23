@@ -54,19 +54,11 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
-router.get("/report/:id", (req, res) => {
+router.get("/reports/:id", (req, res) => {
   Report.findOne({
     where: {
       id: req.params.id,
     },
-    attributes: [
-      "id",
-      "report_url",
-      "title",
-      "report_author",
-      "report_score",
-      "user_id",
-    ],
     include: [
       {
         model: Comment,
@@ -92,7 +84,11 @@ router.get("/report/:id", (req, res) => {
       const report = dbReportData.get({ plain: true });
 
       // pass data to template
+<<<<<<< HEAD
       res.render("single-post", {
+=======
+      res.render("bookreportpage", {
+>>>>>>> 0b3f935 (Updated Handlebars and API)
         report,
         loggedIn: req.session.loggedIn,
       });

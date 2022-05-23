@@ -1,59 +1,89 @@
-
 <div class="report-background">
-    <div class="login-container">
-     <div class = "login-form-style">
-    <form class="login-form">
-      <h2>Create a New Book Report</h2>
-       <div class="organize">
-        <div>
-          icon
+  <div class="login-container">
+    <div class="login-form-style">
+      <form class="login-form">
+        <h2>Create a New Book Report</h2>
+        <div class="organize">
+          <div>
+            icon
+          </div>
+          <input type="text" id="book-title" placeholder="Title" />
         </div>
-        <input type="text" id="book-title" placeholder="Title"/>
-      </div>
-      <div class="organize">
-        <div>
-          icon
+        <div class="organize">
+          <div>
+            icon
+          </div>
+          <input type="text" id="author" placeholder="Author" />
         </div>
-        <input type="text" id="author" placeholder="Author"/>
-      </div>
 
-      <div class="star-rating">
-            <input type="radio" class="radiobtn" name="score" id="star-a" value="5"/>
-            <label for="star-a"></label>
+        <div class="star-rating">
+          <input
+            class="radiobtn"
+            type="radio"
+            name="stars"
+            id="star-a"
+            value="5"
+          />
+          <label for="star-a"></label>
 
-            <input type="radio" class="radiobtn" name="score" id="star-b" value="4"/>
-            <label for="star-b"></label>
-        
-            <input type="radio" class="radiobtn" name="score" id="star-c" value="3"/>
-            <label for="star-c"></label>
-        
-            <input type="radio" class="radiobtn" name="score" id="star-d" value="2"/>
-            <label for="star-d"></label>
-        
-            <input type="radio" class="radiobtn" name="score" id="star-e" value="1"/>
-            <label for="star-e"></label>
-      </div>
-      <div class="modal display:none" >
-        <div class="modalcontent">
-          <h4>Thanks for making a new post! <br>
-          Click the close button to be redirected to the home page</h4>
-          <button id="exit-modal">Close</button>
+          <input
+            class="radiobtn"
+            type="radio"
+            name="stars"
+            id="star-b"
+            value="4"
+          />
+          <label for="star-b"></label>
+
+          <input
+            class="radiobtn"
+            type="radio"
+            name="stars"
+            id="star-c"
+            value="3"
+          />
+          <label for="star-c"></label>
+
+          <input
+            class="radiobtn"
+            type="radio"
+            name="stars"
+            id="star-d"
+            value="2"
+          />
+          <label for="star-d"></label>
+
+          <input
+            class="radiobtn"
+            type="radio"
+            name="stars"
+            id="star-e"
+            value="1"
+          />
+          <label for="star-e"></label>
         </div>
-      </div>
-      <div>
+
+        <div>
           <label for="report-content">What are your thoughts on this book?</label>
-          <br>
-          <textarea name="report-content-area" id="report-content" cols="30" rows="6">Type your thoughts here</textarea>
-      </div>
-      <div>
-        <button type="submit" id="submit-report-btn">Submit</button>
-      </div>
-    </form>
-    </div> 
+          <br />
+          <textarea
+            name="report-content-area"
+            id="report-content"
+            cols="30"
+            rows="6"
+          >Type your thoughts here</textarea>
+        </div>
+        <div>
+          <button type="submit" id="submit-report-btn">Submit</button>
+        </div>
+      </form>
+    </div>
   </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js">
-</script>
-<script src="../public/sfx/howler.js/"></script>
-<script src="../js/new.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+  >
+  </script>
+  <script src="../public/sfx/howler.js/"></script>
+  <script src="../js/new.js"></script>
 
 </div>
