@@ -9,9 +9,7 @@
         </div>
       </section>
     {{#each report.comments as |comment|}}
-      <li>
-        {{> comment-details }}
-      </li>
+        {{> comments-details }}
       {{/each}}
      <div class="add-comment">
         <form>
@@ -21,5 +19,5 @@
           <button type="submit" id="comment-btn">Submit</button>
         </div>
       </div>
-      <script src="../public/js/comment.js"></script>
+  <script src="../js/comment.js"></script>
 </div>
