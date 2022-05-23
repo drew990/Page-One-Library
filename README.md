@@ -2,8 +2,15 @@
 
 Page One Library is a full stack website in which users can create an account, log in, create and view book reviews, and comment on others' posts to interact. Authentication is required to access posting and commenting functionality.
 
-## Application Screenshot
-    pictures here
+## Application Screenshots
+### Home Page
+ ![screenshot of home page](images/homepage.png)
+### Login
+![screenshot of login page](images/login.png)
+### Create Post Page
+![screenshot of create page](images/create.png)
+### Individual Post Page
+![screenshot of individual post page](images/post.png)
 
 ## Technology Used
 - JavaScript
