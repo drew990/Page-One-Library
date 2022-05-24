@@ -11,27 +11,11 @@ router.get("/", (req, res) => {
     });
 });
 
-router.get("/:id", (req, res) => {
-  Comment.findAll({
-    where: {
-      id: req.params.id,
-    },
-  })
-    .then((dbCommentData) => res.json(dbCommentData))
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
-
 router.post("/", (req, res) => {
-  console.log("LOOK AT ME FOR REQ BODY COMMENT:", req.body, req.session);
-
   Comment.create({
     comment_text: req.body.comment_text,
-    user_id: req.session.user_id,
-    report_id: req.body.post_id,
-    post_id: req.body.post_id,
+    user_id: req.body.user_id,
+    report_id: req.body.report_id,
   })
     .then((dbCommentData) => res.json(dbCommentData))
     .catch((err) => {
