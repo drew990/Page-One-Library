@@ -294,6 +294,7 @@ main {
 
 .add-comment div {
   padding: 25px;
+<<<<<<< HEAD
 }
 
 
@@ -321,4 +322,6 @@ main {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+=======
+>>>>>>> develop
 }

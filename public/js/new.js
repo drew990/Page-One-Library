@@ -16,6 +16,7 @@ const applauseSound = new Howl({
 // new report handle
 async function newReporthandler(event) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Prevent default action from happening
     // Note: Prevents redirect until login is replace
     event.preventDefault();
@@ -47,6 +48,8 @@ async function newReporthandler(event) {
         alert("failed to make a new report");
       }
 =======
+=======
+>>>>>>> develop
   console.log("you tried to submit a new report!");
   // Prevent default action from happening
   // Note: Prevents redirect until login is replace
@@ -76,11 +79,15 @@ async function newReporthandler(event) {
     } else {
       // Let user know they failed to log in
       alert("failed to make a new report");
+<<<<<<< HEAD
 >>>>>>> 0b3f935 (Updated Handlebars and API)
+=======
+>>>>>>> develop
     }
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 let modal = document.querySelector(".modal")
 function openModal(){
@@ -94,6 +101,8 @@ function closeModal(event){
 
 =======
 >>>>>>> 0b3f935 (Updated Handlebars and API)
+=======
+>>>>>>> develop
 document
   .getElementById("submit-report-btn")
   .addEventListener("click", newReporthandler);

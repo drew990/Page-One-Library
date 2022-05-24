@@ -1,7 +1,10 @@
 const router = require("express").Router();
 const { Report, User, Comment } = require("../../models");
 const sequelize = require("../../config/connection");
+<<<<<<< HEAD
 const res = require("express/lib/response");
+=======
+>>>>>>> develop
 
 router.get("/", (req, res) => {
   Report.findAll({
@@ -27,6 +30,7 @@ router.get("/", (req, res) => {
       res.status(500).json(err);
     });
 });
+<<<<<<< HEAD
 
 router.get("/:id", (req, res) => {
   Report.findOne({
@@ -60,6 +64,34 @@ router.get("/:id", (req, res) => {
 
 router.put("/:id", (req, res) => {
   Report.update({});
+=======
+
+router.get("/:id", (req, res) => {
+  Report.findOne({
+    include: [
+      { model: User, attributes: ["username"] },
+      {
+        model: Comment,
+        attributes: ["id", "comment_text", "post_id", "user_id"],
+        include: {
+          model: User,
+          attributes: ["username"],
+        },
+      },
+    ],
+  })
+    .then((dbReportData) => {
+      if (!dbReportData) {
+        res.status(404).json({ message: "No book report found with this id" });
+        return;
+      }
+      res.json(dbReportData);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+>>>>>>> develop
 });
 
 router.post("/", (req, res) => {
